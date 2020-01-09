@@ -15,11 +15,7 @@ var css = require( "css" ),
 // this, we parse js/jquery.mobile.js and reconstruct the array of
 // dependencies listed therein.
 function makeModulesList( modules ) {
-	var parsedFile, desiredModulesHash, listedModules, index, singleListedModule,
-		fixedModules = [],
-		jsFile = grunt.file.read( path.join( "js", "jquery.mobile.js" ) );
-
-	modules = modules.split( "," );
+	
 
 	// This is highly dependent on the contents of js/jquery.mobile.js. It assumes that all
 	// dependencies are listed flatly in the first argument of the first expression in the
